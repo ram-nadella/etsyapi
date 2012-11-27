@@ -1,4 +1,2 @@
-etsyapi
-=======
-
-Official repository for the Etsy API
+The Etsy API
+============
