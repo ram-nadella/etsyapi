@@ -27,9 +27,9 @@ x-api-key: ABC789
 ### Submit the OAuth Token
 
 We use OAuth 2 bearer tokens which are submitted in the Authorization header.
-If the OAuth token is 'ABC789', then submit the header as:
+If the OAuth token is 'xyz123', then submit the header as:
 ```
-Authorization: Bearer ABC789
+Authorization: Bearer xyz123
 ```
 
 Perspectives
