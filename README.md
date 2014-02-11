@@ -4,7 +4,9 @@ The Etsy API
 API Basics
 -------------
 
-This is temporary documentation for v3 of the Etsy API.
+This is temporary documentation for V3 of the Etsy API.
+See the [API Reference](REFERENCE.md) for information regarding
+specific API calls.
 
 ### Base URL
 
