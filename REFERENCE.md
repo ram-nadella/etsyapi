@@ -13,6 +13,13 @@ Renews the listing with the given listing ID.
 Provisional Users
 ----------------------
 
+Applications that do not need or do not yet have Full Access can,
+by default, authenticate only for the user who owns the application.
+It was possible to add additional users, "Provisional Users", but
+required emailing Etsy and we would do it manually. Now this is
+available to application developers to manage directly via the
+Provisional Users API calls.
+
 #### GET /application/provisional-users
 
 Returns all provisional users currently added for your application.
@@ -36,3 +43,13 @@ provisional user.
 
 Please let me know if you have any questions about these methods or
 notice any unexpected behavior.
+
+Testing
+----------------------
+
+These calls exist primarily for testing connectivity to the Etsy API.
+
+#### GET /public/ping
+
+Simply returns "pong" if your API is valid and you can successfully
+connect to the API.
