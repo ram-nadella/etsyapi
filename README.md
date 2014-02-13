@@ -18,18 +18,29 @@ All paths should be added after that. Note that HTTPS is **required**;
 
 ### Submit the API Key
 
-The API key is submitted as in the `x-api-key` HTTP header.
-If the API key is 'ABC789', then submit a header as:
+The API key is included in the request in the `x-api-key` HTTP header.
+If the API key is 'ABC789', then include a header as:
 ```
 x-api-key: ABC789
 ```
 
 ### Submit the OAuth Token
 
-We use OAuth 2 bearer tokens which are submitted in the Authorization header.
-If the OAuth token is 'xyz123', then submit the header as:
+We use OAuth 2.0 bearer tokens which are sent in the Authorization header.
+If the OAuth token is 'xyz123', then send the header as:
 ```
 Authorization: Bearer xyz123
+```
+
+### Examples for Curl
+
+Here are two examples with curl. The first is for a Public Perspective
+call that does not require OAuth. The second is for a Member Perspective call
+that **does** require OAuth.
+
+```
+curl -H "x-api-key: <your-key-here>" https://openapi.etsy.com/v3/public/ping
+curl -H "x-api-key: <your-key-here>" -H "Authorization: Bearer <your-oauth-token-here>" https://openapi.etsy.com/v3/member/emails
 ```
 
 Perspectives
@@ -54,7 +65,8 @@ https://openapi.etsy.com/v3/member
 ```
 
 Member Perspective calls require an OAuth token and are made on behalf
-of the user who authorized that token. This perspective might be used
+of the user who authorized that token. The user ID is implied by the
+OAuth token and cannot be specified directly. This perspective might be used
 to retrieve the email address of a user.
 
 ### Shop Perspective
