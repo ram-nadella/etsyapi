@@ -1,6 +1,16 @@
 The Etsy API Reference
 =========================
 
+Shops
+----------------------
+
+#### GET /member/shops
+
+**OAuth Scope:** shops_rw
+
+Retrieve a list of the members shops. If the member has no shops, this
+will return an empty array.
+
 Listings
 ----------------------
 
