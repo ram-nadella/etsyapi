@@ -20,6 +20,19 @@ Listings
 
 Renews the listing with the given listing ID.
 
+Countries
+----------------------
+
+#### GET /public/countries
+
+Retrieve a list of all countries with some additional data.
+
+#### GET /public/countries/:country_id
+
+Retrieve data for a single country.
+
+:country_id can be an integer country ID or a two letter ISO country code
+
 Provisional Users
 ----------------------
 
