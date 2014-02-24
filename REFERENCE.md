@@ -14,11 +14,30 @@ will return an empty array.
 Listings
 ----------------------
 
-#### POST /shop/:shop_id/listings/:listing_id/renewals
+#### POST /shop/:shop_id/listings/:listing_id/renew
 
 **OAuth Scope:** listings_w
 
 Renews the listing with the given listing ID.
+
+#### PUT /shop/:shop_id/listings/:listing_id/activate
+
+**OAuth Scope:** listings_w
+
+Sets the given listing to active. Returns 400 if the listing is expired.
+In this case the listing must be renewed instead.
+
+#### PUT /shop/:shop_id/listings/:listing_id/deactivate
+
+**OAuth Scope:** listings_w
+
+Sets the given listing to inactive.
+
+#### DELETE /shop/:shop_id/listings/:listing_id
+
+**OAuth Scope:** listings_w
+
+Deletes the given listing.
 
 Countries
 ----------------------
