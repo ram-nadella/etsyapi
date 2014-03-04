@@ -31,6 +31,8 @@ If the OAuth token is 'xyz123', then send the header as:
 ```
 Authorization: Bearer xyz123
 ```
+The bearer token should be the same OAuth token that you use
+for making OAuth 1.0 calls in v2 of the Etsy API.
 
 ### Examples for Curl
 
