@@ -34,14 +34,28 @@ Authorization: Bearer xyz123
 The bearer token should be the same OAuth token that you use
 for making OAuth 1.0 calls in v2 of the Etsy API.
 
-### Examples for Curl
+### Submit the Locale
+
+We expect the locale information to be submitted in the
+"X-Detected-Locale" header as a pipe delimited tuple of 3 elements:
+
+1. Currency
+2. Language
+3. Region
+
+Examples of the locale header contents might be:
+
+* `USD|en-US|US`
+* `EUR|fr|EU`
+
+## Examples for Curl
 
 Here are two examples with curl. The first is for a Public Perspective
 call that does not require OAuth. The second is for a Member Perspective call
 that **does** require OAuth.
 
 ```
-curl -H "x-api-key: <your-key-here>" https://openapi.etsy.com/v3/public/ping
+curl -H "x-api-key: <your-key-here>" -H "X-Detected-Locale: USD|en|US" https://openapi.etsy.com/v3/public/ping
 curl -H "x-api-key: <your-key-here>" -H "Authorization: Bearer <your-oauth-token-here>" https://openapi.etsy.com/v3/member/emails
 ```
 
