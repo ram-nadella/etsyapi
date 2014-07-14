@@ -86,6 +86,16 @@ provisional user.
 Please let me know if you have any questions about these methods or
 notice any unexpected behavior.
 
+Deleting user tokens
+----------------------
+
+Access tokens created by your application for a user should be revoked as appropriate (eg. user logged out of your app, user wishes to unlink their Etsy account and your app etc.)
+
+#### DELETE /appuser
+
+Making this request will revoke the token that was used to make the request. Using this token in the future will result in a "401 Unauthorized" response.
+
+
 Testing
 ----------------------
 
